@@ -1,0 +1,18 @@
+{
+	log tailscale {
+		level DEBUG
+	}
+	tailscale {
+		ephemeral
+	}
+}
+
+immich.kingfisher-noodlefish.ts.net {
+	reverse_proxy 127.0.0.1:2283 {
+		# Disable response buffering for large 4K video streams & multi-GB photo uploads
+		flush_interval -1
+		transport http {
+			response_header_timeout 600s
+		}
+	}
+}

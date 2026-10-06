@@ -1,0 +1,23 @@
+# Environment and credentials (NEVER commit live keys)
+.env
+.env.local
+*.env
+
+# Keep example environment files
+!.env.example
+!example.env
+
+# Local data & storage mounts
+postgres/
+library/
+model-cache/
+ts-data/
+caddy-data/
+
+# OS and editor files
+.DS_Store
+._*
+*.swp
+*.swo
+.vscode/
+.idea/
